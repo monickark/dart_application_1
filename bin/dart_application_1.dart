@@ -1,12 +1,16 @@
 import 'dart:io';
 void main() {
-  print('Hello world');
-  hello();
-  print("~~~~~~~~~~~~~~~~~~~~~~~~");
-  variblesDatatypes();
+  // print('Hello world');
+  // hello();
+  // print("~~~~~~~~~~~~~~~~~~~~~~~~");
+  // variblesDatatypes();
 
-   print("~~~~~~~~~~~~~~~~~~~~~~~~");
-  checkIO();
+  // print("~~~~~~~~~~~~~~~~~~~~~~~~");
+  // checkIO();
+
+  print("~~~~~~~~~~~~~~~~~~~~~~~~");
+  checkArray();
+
 }
 
 hello()=> print('from hello function');
@@ -36,4 +40,18 @@ void checkIO() {
   name = stdin.readLineSync();
   age = stdin.readLineSync();
   print('Name is ${name} | age is ${age}');
+}
+
+void checkArray() {
+  var obj = [25,8,32,67,12,89,0];
+
+  for (var singObj in obj) {
+    if(singObj == 12) {
+      break;
+    }
+    if(singObj == 8) {
+      continue;
+    }
+    print ('single object from array is $singObj');
+  } 
 }
