@@ -1,8 +1,12 @@
+import 'dart:io';
 void main() {
   print('Hello world');
   hello();
   print("~~~~~~~~~~~~~~~~~~~~~~~~");
   variblesDatatypes();
+
+   print("~~~~~~~~~~~~~~~~~~~~~~~~");
+  checkIO();
 }
 
 hello()=> print('from hello function');
@@ -24,4 +28,12 @@ void variblesDatatypes(){
   c ='Mark Antony';
   print('the value of c is $c type: ${c.runtimeType}');  
  // test 
+}
+
+void checkIO() {
+  var name,age;
+  print('Enter name & age :');
+  name = stdin.readLineSync();
+  age = stdin.readLineSync();
+  print('Name is ${name} | age is ${age}');
 }
